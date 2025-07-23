@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parsha Food Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Parsha<span>FoodGallery</span></a>
+        <nav class="navbar">
+            <a href="#Home" class="">Home</a>
+            <a href="#Dishes">Makanan</a>
+            <a href="#About">Koki</a>
+            <a href="#Review">Review</a>
+        </nav>
+        <div class="activity-section">
+            <i class='bx bx-search'></i>
+            <i class='bx bx-heart'></i>
+            <i class='bx bx-cart-add'></i>
+        </div>  
+    </header>
+
+    <section class="home-section" id="Home">
+        <div class="text-content">
+            <h5>Makanan Paling Laris</h5>
+            <h2>Nasi Goreng</h2>
+            <p>Nasi Goreng yang dimasak di tangan koki terbaik kami dan ditambah dengan bumbu-bumbu rahasia milik dapur kami, sehingga membuat Nasi Goreng ini tidak terasa monoton.</p>
+            <button onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'" class="btn">Mau Pesan?</button>
+            <button onclick="window.location.href='#Dishes'" class="btn btn-explore">Explore More</button>
+        </div>
+        <div class="image-section">
+            <img src="nasigoreng.png" alt="Nasi Goreng">
+            <div class="shadow"></div>
+        </div>
+    </section>
+
+    <section class="dish-section" id="Dishes">
+        <h2 class="heading">Makanan <span>Lainnya</span></h2>
+        <div class="dishGallery">
+            <div class="food-image">
+                <img src="pudding.png" alt="Milk Pudding">
+                <div class="inner-text">
+                    <h2>Pudding Susu</h2>
+                    <p>Pudding yang menghadirkan berbagai cita rasa.</p>
+                    <div class="price-section">
+                        <span>Rp.10.000</span>
+                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
+                    </div>
+                </div>
+            </div>
+            <div class="food-image">
+                <img src="kentang.png" alt="French Fries">
+                <div class="inner-text">
+                    <h2>Kentang Goreng</h2>
+                    <p>Digoreng dengan garing dan ditambahkan bumbu khas.</p>
+                    <div class="price-section">
+                        <span>Rp.10.000</span>
+                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
+                    </div>
+                </div>
+            </div>
+            <div class="food-image">
+                <img src="tempe.png" alt="Caramel Ice Cream">
+                <div class="inner-text">
+                    <h2>Tempe Goreng</h2>
+                    <p>Irisan tempe yang tebal akan sangat enak.</p>
+                    <div class="price-section">
+                        <span>Rp.8.000</span>
+                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
+                    </div>
+                </div>
+            </div>
+            <div class="food-image">
+                <img src="Resep_es_buah_campur__Buah_naga_Alpukat_Nanas_-removebg-preview.png".png" alt="Sop Buah">
+                <div class="inner-text">
+                    <h2>Sop Buah</h2>
+                    <p>Berbagai buah ada di satu porsi ini.</p>
+                    <div class="price-section">
+                        <span>Rp.7.000</span>
+                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="About">
+        <h2 class="heading">Koki Spesial <span>Kita</span></h2>
+        <div class="chef-details">
+            <div class="chef-image">
+                <div class="image-1">
+                    <img src="chef.png" alt="Chef Romeo Mario">
+                    <div class="text-content-1">
+                        <div class="effect">
+                            <span>Romeo Mario</span>
+                            <p class="ptext">Age: 28</p>
+                            <p class="text-p">Koki yang sangat mahir dallam mengolah daging.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chef-image chef-image-2">
+                <div class="image-1">
+                    <img src="chef2.jpg" alt="Chef Darendra Kasae">
+                    <div class="text-content-1">
+                        <div class="effect">
+                            <span>Darendra Kasae</span>
+                            <p class="ptext">Age: 22</p>
+                            <p class="text-p">Koki yang sangat memikirkan tentang seni estetika.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chef-image">
+                <div class="image-1">
+                    <img src="chef3.jpg" alt="Chef Johny Hao">
+                    <div class="text-content-1">
+                        <div class="effect">
+                            <span>Johny Hao</span>
+                            <p class="ptext">Age: 35</p>
+                            <p class="text-p">Sangat lihai dalam mengolah masakan dari Asia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="facility-section">
+        <h2 class="heading">Kenapa <span>Harus Kami?</span></h2>
+        <div class="icon-section">
+            <div class="icon-text">
+                <i class='bx bx-message-alt-detail'></i>
+                <h2>Mudah Untuk Dipesan</h2>
+                <p>Order cepat dan praktis dari website kami langsung.</p>
+            </div>
+            <div class="icon-text">
+                <i class='bx bx-badge-check'></i>
+                <h2>Kualitas Terbaik</h2>
+                <p>Bahan segar dan chef profesional kami jamin kualitasnya.</p>
+            </div>
+            <div class="icon-text">
+                <i class='bx bxs-truck'></i>
+                <h2>Pengirimian Cepat</h2>
+                <p>Gratis ongkir untuk pemesanan dalam area layanan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="review-section" id="Review">
+        <h2 class="heading">Komentar Dari <span>Mereka</span></h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="review-image-section">
+                        <img src="review2.jpg" alt="Client 1">
+                        <div class="review-text">
+                            <h2>Azamat Z.</h2>
+                            <p>Layanan sangat cepat dan makanan enak. Sangat direkomendasikan!</p>
+                            <h5>Business Man</h5>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-image-section">
+                        <img src="review3.jpg" alt="Client 2">
+                        <div class="review-text">
+                            <h2>Louis T.</h2>
+                            <p>Rasa makanannya luar biasa dan tampilannya sangat menarik.</p>
+                            <h5>Beauty Fashion</h5>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="swiper-slide">
+                    <div class="review-image-section">
+                        <img src="review1.jpg" alt="Client 2">
+                        <div class="review-text">
+                            <h2>Winston W.</h2>
+                            <p>Sangat Lezat dan Nikmat. Bintang 10!</p>
+                            <h5>Lawyer</h5>
+                            <div class="star">
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                                <i class='bx bxs-star'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="innerItem">
+            <h2>Food <span>Gallery</span></h2>
+            <div class="textbar">
+                <a href="#">Home</a>
+                <a href="#Dishes">Makanan</a>
+                <a href="#About">Koki</a>
+                <a href="#Review">Review</a>
+            </div>
+            <div class="footer-icon">
+                <i onclick="window.location.href='https://www.tiktok.com/@parrrshaaa_'" class='bx bxl-tiktok'></i>
+                <i onclick="window.location.href='https://www.instagram.com/parrrshaaa/'" class='bx bxl-instagram'></i>
+                <i class='bx bxl-facebook'></i>
+                <i onclick="window.location.href='https://github.com/ParsaaOnlyy'" class='bx bxl-github'></i>
+            </div>
+        </div>
+        <hr>
+        <p>&copy; 2025 onlyparsaa. All rights reserved.</p>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="script.js"></script>
+
+    <!-- Script Swiper Init -->
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        autoplay: {
+          delay: 5000,
+        }
+      });
+
+      // Toggle navbar
+      const menuIcon = document.querySelector('#menu');
+      const navbar = document.querySelector('.navbar');
+      menuIcon.onclick = () => {
+          navbar.classList.toggle('active');
+      };
+    </script>
+</body>
+</html>
