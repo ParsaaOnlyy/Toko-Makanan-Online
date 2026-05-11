@@ -1,262 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parsha Food Gallery</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parsha Food Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Parsha<span>FoodGallery</span></a>
-        <nav class="navbar">
-            <a href="#Home" class="">Home</a>
-            <a href="#Dishes">Makanan</a>
-            <a href="#About">Koki</a>
-            <a href="#Review">Review</a>
-        </nav>
-        <div class="activity-section">
-            <i class='bx bx-search'></i>
-            <i class='bx bx-heart'></i>
-            <i class='bx bx-cart-add'></i>
-        </div>  
-    </header>
 
-    <section class="home-section" id="Home">
-        <div class="text-content">
-            <h5>Makanan Paling Laris</h5>
-            <h2>Nasi Goreng</h2>
-            <p>Nasi Goreng yang dimasak di tangan koki terbaik kami dan ditambah dengan bumbu-bumbu rahasia milik dapur kami, sehingga membuat Nasi Goreng ini tidak terasa monoton.</p>
-            <button onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'" class="btn">Mau Pesan?</button>
-            <button onclick="window.location.href='#Dishes'" class="btn btn-explore">Explore More</button>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <a href="#Home" class="logo">Parsha<span>Food</span></a>
+    <nav class="navbar" id="navbar">
+      <a href="#Home" class="nav-link active">Home</a>
+      <a href="#Dishes" class="nav-link">Makanan</a>
+      <a href="#About" class="nav-link">Koki</a>
+      <a href="#Why" class="nav-link">Kenapa Kami</a>
+      <a href="#Review" class="nav-link">Review</a>
+    </nav>
+    <div class="header-right">
+      <div class="activity-section">
+        <button class="icon-btn" id="searchBtn" aria-label="Search"><i class='bx bx-search'></i></button>
+        <button class="icon-btn" aria-label="Favorites"><i class='bx bx-heart'></i></button>
+        <button class="icon-btn" aria-label="Cart"><i class='bx bx-cart-add'></i></button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SEARCH OVERLAY -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-box">
+        <i class='bx bx-search search-icon-inside'></i>
+        <input type="text" placeholder="Cari makanan... (contoh: mie, tempe)" class="search-input" id="searchInput" autocomplete="off" />
+        <button class="close-search" id="closeSearch"><i class='bx bx-x'></i></button>
+      </div>
+      <div class="search-results" id="searchResults">
+        <p class="search-hint">Ketik nama makanan yang kamu cari 🍽️</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="home-section" id="Home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="text-content" data-aos>
+      <span class="badge">⭐ #1 Makanan Terlaris</span>
+      <h1>Nasi<br /><em>Goreng</em></h1>
+      <p>Dimasak oleh koki terbaik kami dengan bumbu rahasia dapur Parsha. Cita rasa autentik yang tak pernah membosankan, tersaji hangat untuk meja makan Anda.</p>
+      <div class="hero-actions">
+        <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class='bx bxl-whatsapp'></i> Pesan Sekarang
+        </a>
+        <a href="#Dishes" class="btn btn-outline">Lihat Menu <i class='bx bx-arrow-back bx-rotate-180'></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>200+</strong><span>Menu</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4.9★</strong><span>Rating</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>10K+</strong><span>Pelanggan</span></div>
+      </div>
+    </div>
+    <div class="image-section" data-aos>
+      <div class="img-ring"></div>
+      <img src="nasigoreng.png" alt="Nasi Goreng" class="hero-img" />
+      <div class="shadow-el"></div>
+      <div class="floating-tag tag-1"><i class='bx bxs-star'></i> Best Seller</div>
+      <div class="floating-tag tag-2">🌶️ Spicy Option</div>
+    </div>
+  </section>
+
+  <!-- DISHES SECTION -->
+  <section class="dish-section" id="Dishes">
+    <div class="section-header">
+      <span class="section-label">Our Menu</span>
+      <h2 class="heading">Menu <span>Pilihan</span></h2>
+      <p class="section-desc">Disiapkan fresh setiap hari dengan bahan pilihan berkualitas tinggi</p>
+    </div>
+    <div class="dishGallery" id="dishGallery">
+
+      <!-- Kentang Goreng -->
+      <div class="food-card" data-category="snack">
+        <div class="food-card-img">
+          <img src="kentang.png" alt="Kentang Goreng" />
+          <span class="food-badge new">New</span>
         </div>
-        <div class="image-section">
-            <img src="nasigoreng.png" alt="Nasi Goreng">
-            <div class="shadow"></div>
+        <div class="food-card-body">
+          <h3>Kentang Goreng</h3>
+          <p>Garing di luar, lembut di dalam. Disajikan dengan bumbu khas Parsha.</p>
+          <div class="food-card-footer">
+            <span class="price">Rp 10.000</span>
+            <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="order-btn" target="_blank" rel="noopener">
+              <i class='bx bx-cart-add'></i> Beli
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="dish-section" id="Dishes">
-        <h2 class="heading">Makanan <span>Lainnya</span></h2>
-        <div class="dishGallery">
-            <div class="food-image">
-                <img src="pudding.png" alt="Milk Pudding">
-                <div class="inner-text">
-                    <h2>Pudding Susu</h2>
-                    <p>Pudding yang menghadirkan berbagai cita rasa.</p>
-                    <div class="price-section">
-                        <span>Rp.10.000</span>
-                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
-                    </div>
-                </div>
-            </div>
-            <div class="food-image">
-                <img src="kentang.png" alt="French Fries">
-                <div class="inner-text">
-                    <h2>Kentang Goreng</h2>
-                    <p>Digoreng dengan garing dan ditambahkan bumbu khas.</p>
-                    <div class="price-section">
-                        <span>Rp.10.000</span>
-                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
-                    </div>
-                </div>
-            </div>
-            <div class="food-image">
-                <img src="tempe.png" alt="Caramel Ice Cream">
-                <div class="inner-text">
-                    <h2>Tempe Goreng</h2>
-                    <p>Irisan tempe yang tebal akan sangat enak.</p>
-                    <div class="price-section">
-                        <span>Rp.8.000</span>
-                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
-                    </div>
-                </div>
-            </div>
-            <div class="food-image">
-                <img src="Resep_es_buah_campur__Buah_naga_Alpukat_Nanas_-removebg-preview.png" alt="Sop Buah">
-                <div class="inner-text">
-                    <h2>Sop Buah</h2>
-                    <p>Berbagai buah ada di satu porsi ini.</p>
-                    <div class="price-section">
-                        <span>Rp.7.000</span>
-                        <span onclick="window.location.href='https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0'">Beli</span>
-                    </div>
-                </div>
-            </div>
+      <!-- Tempe Goreng -->
+      <div class="food-card" data-category="main">
+        <div class="food-card-img">
+          <img src="tempe.png" alt="Tempe Goreng" />
         </div>
-    </section>
-
-    <section class="about-section" id="About">
-        <h2 class="heading">Koki Spesial <span>Kita</span></h2>
-        <div class="chef-details">
-            <div class="chef-image">
-                <div class="image-1">
-                    <img src="chef.png" alt="Chef Romeo Mario">
-                    <div class="text-content-1">
-                        <div class="effect">
-                            <span>Romeo Mario</span>
-                            <p class="ptext">Age: 28</p>
-                            <p class="text-p">Koki yang sangat mahir dallam mengolah daging.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chef-image chef-image-2">
-                <div class="image-1">
-                    <img src="chef2.jpg" alt="Chef Darendra Kasae">
-                    <div class="text-content-1">
-                        <div class="effect">
-                            <span>Darendra Kasae</span>
-                            <p class="ptext">Age: 22</p>
-                            <p class="text-p">Koki yang sangat memikirkan tentang seni estetika.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chef-image">
-                <div class="image-1">
-                    <img src="chef3.jpg" alt="Chef Johny Hao">
-                    <div class="text-content-1">
-                        <div class="effect">
-                            <span>Johny Hao</span>
-                            <p class="ptext">Age: 35</p>
-                            <p class="text-p">Sangat lihai dalam mengolah masakan dari Asia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="food-card-body">
+          <h3>Tempe Goreng</h3>
+          <p>Irisan tempe tebal, renyah sempurna dan kaya akan protein.</p>
+          <div class="food-card-footer">
+            <span class="price">Rp 8.000</span>
+            <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="order-btn" target="_blank" rel="noopener">
+              <i class='bx bx-cart-add'></i> Beli
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="facility-section">
-        <h2 class="heading">Kenapa <span>Harus Kami?</span></h2>
-        <div class="icon-section">
-            <div class="icon-text">
-                <i class='bx bx-message-alt-detail'></i>
-                <h2>Mudah Untuk Dipesan</h2>
-                <p>Order cepat dan praktis dari website kami langsung.</p>
-            </div>
-            <div class="icon-text">
-                <i class='bx bx-badge-check'></i>
-                <h2>Kualitas Terbaik</h2>
-                <p>Bahan segar dan chef profesional kami jamin kualitasnya.</p>
-            </div>
-            <div class="icon-text">
-                <i class='bx bxs-truck'></i>
-                <h2>Pengirimian Cepat</h2>
-                <p>Gratis ongkir untuk pemesanan dalam area layanan.</p>
-            </div>
+      <!-- Ayam Goreng Jawa -->
+      <div class="food-card" data-category="main">
+        <div class="food-card-img">
+          <img src="download (8).jpg" alt="Ayam Goreng Jawa" />
+          <span class="food-badge promo">Promo</span>
         </div>
-    </section>
-
-    <section class="review-section" id="Review">
-        <h2 class="heading">Komentar Dari <span>Mereka</span></h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="review-image-section">
-                        <img src="review2.jpg" alt="Client 1">
-                        <div class="review-text">
-                            <h2>Azamat Z.</h2>
-                            <p>Layanan sangat cepat dan makanan enak. Sangat direkomendasikan!</p>
-                            <h5>Business Man</h5>
-                            <div class="star">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="review-image-section">
-                        <img src="review3.jpg" alt="Client 2">
-                        <div class="review-text">
-                            <h2>Louis T.</h2>
-                            <p>Rasa makanannya luar biasa dan tampilannya sangat menarik.</p>
-                            <h5>Beauty Fashion</h5>
-                            <div class="star">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                                <div class="swiper-slide">
-                    <div class="review-image-section">
-                        <img src="review1.jpg" alt="Client 2">
-                        <div class="review-text">
-                            <h2>Winston W.</h2>
-                            <p>Sangat Lezat dan Nikmat. Bintang 10!</p>
-                            <h5>Lawyer</h5>
-                            <div class="star">
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                                <i class='bx bxs-star'></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-pagination"></div>
+        <div class="food-card-body">
+          <h3>Ayam Goreng Jawa</h3>
+          <p>Seporsi Ayam Goreng dengan bumbu khas dan sedikit tambahan pelengkap.</p>
+          <div class="food-card-footer">
+            <span class="price">Rp 27.000</span>
+            <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="order-btn" target="_blank" rel="noopener">
+              <i class='bx bx-cart-add'></i> Beli
+            </a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="innerItem">
-            <h2>Food <span>Gallery</span></h2>
-            <div class="textbar">
-                <a href="#">Home</a>
-                <a href="#Dishes">Makanan</a>
-                <a href="#About">Koki</a>
-                <a href="#Review">Review</a>
-            </div>
-            <div class="footer-icon">
-                <i onclick="window.location.href='https://www.tiktok.com/@parrrshaaa_'" class='bx bxl-tiktok'></i>
-                <i onclick="window.location.href='https://www.instagram.com/parrrshaaa/'" class='bx bxl-instagram'></i>
-                <i class='bx bxl-facebook'></i>
-                <i onclick="window.location.href='https://github.com/ParsaaOnlyy'" class='bx bxl-github'></i>
-            </div>
+      <!-- Kwetiau Goreng -->
+      <div class="food-card" data-category="main">
+        <div class="food-card-img">
+          <img src="Kwetiau goreng.jpg" alt="Kwetiau Goreng" />
+          <span class="food-badge">Popular</span>
         </div>
-        <hr>
-        <p>&copy; 2025 onlyparsaa. All rights reserved.</p>
-    </footer>
+        <div class="food-card-body">
+          <h3>Kwetiau Goreng</h3>
+          <p>Mie kenyal dengan bumbu gurih khas, ditambah sayuran segar dan rasa yang khas.</p>
+          <div class="food-card-footer">
+            <span class="price">Rp 16.000</span>
+            <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="order-btn" target="_blank" rel="noopener">
+              <i class='bx bx-cart-add'></i> Beli
+            </a>
+          </div>
+        </div>
+      </div>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script type="module" src="script.js"></script>
+      <!-- CapCay -->
+      <div class="food-card" data-category="main">
+        <div class="food-card-img">
+          <img src="Cap Cay Photography.jpg" alt="CapCay" />
+          <span class="food-badge new">New</span>
+        </div>
+        <div class="food-card-body">
+          <h3>CapCay</h3>
+          <p>Sayuran segar beraneka ragam dimasak dengan saus tiram spesial, lezat dan bergizi.</p>
+          <div class="food-card-footer">
+            <span class="price">Rp 13.000</span>
+            <a href="https://api.whatsapp.com/send/?phone=6285179581050&text&type=phone_number&app_absent=0" class="order-btn" target="_blank" rel="noopener">
+              <i class='bx bx-cart-add'></i> Beli
+            </a>
+          </div>
+        </div>
+      </div>
 
-    <!-- Script Swiper Init -->
-    <script>
-      const swiper = new Swiper('.mySwiper', {
-        loop: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
-        },
-        autoplay: {
-          delay: 5000,
-        }
-      });
+    </div>
 
-      // Toggle navbar
-      const menuIcon = document.querySelector('#menu');
-      const navbar = document.querySelector('.navbar');
-      menuIcon.onclick = () => {
-          navbar.classList.toggle('active');
-      };
-    </script>
+    <!-- Empty State for Search -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <span>🔍</span>
+      <h3>Menu tidak ditemukan</h3>
+      <p>Coba kata kunci lain, ya!</p>
+    </div>
+  </section>
+
+  <!-- CHEF SECTION -->
+  <section class="about-section" id="About">
+    <div class="section-header">
+      <span class="section-label">Tim Kami</span>
+      <h2 class="heading">Koki <span>Spesial</span> Kami</h2>
+      <p class="section-desc">Diracik oleh tangan-tangan berpengalaman yang penuh dedikasi</p>
+    </div>
+    <div class="chef-grid">
+      <div class="chef-card">
+        <div class="chef-img-wrap">
+          <img src="chef.png" alt="Chef Romeo Mario" />
+          <div class="chef-overlay">
+            <span class="chef-specialty">🥩 Spesialis Daging</span>
+          </div>
+        </div>
+        <div class="chef-info">
+          <h3>Romeo Mario</h3>
+          <p>Age: 28</p>
+          <span>Sangat mahir dalam mengolah berbagai jenis daging pilihan.</span>
+        </div>
+      </div>
+
+      <div class="chef-card chef-featured">
+        <div class="chef-img-wrap">
+          <img src="chef2.jpg" alt="Chef Darendra Kasae" />
+          <div class="chef-overlay">
+            <span class="chef-specialty">🎨 Seni Estetika</span>
+          </div>
+        </div>
+        <div class="chef-info">
+          <h3>Darendra Kasae</h3>
+          <p>Age: 22</p>
+          <span>Mengutamakan tampilan estetis yang indah di setiap sajian.</span>
+        </div>
+      </div>
+
+      <div class="chef-card">
+        <div class="chef-img-wrap">
+          <img src="chef3.jpg" alt="Chef Johny Hao" />
+          <div class="chef-overlay">
+            <span class="chef-specialty">🍜 Masakan Asia</span>
+          </div>
+        </div>
+        <div class="chef-info">
+          <h3>Johny Hao</h3>
+          <p>Age: 35</p>
+          <span>Lihai mengolah berbagai masakan Asia dengan cita rasa otentik.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="facility-section" id="Why">
+    <div class="section-header">
+      <span class="section-label">Keunggulan</span>
+      <h2 class="heading">Kenapa <span>Harus Kami?</span></h2>
+    </div>
+    <div class="facility-grid">
+      <div class="facility-card">
+        <div class="facility-icon"><i class='bx bx-message-alt-detail'></i></div>
+        <h3>Mudah Dipesan</h3>
+        <p>Order cepat dan praktis langsung dari website kami, tanpa ribet.</p>
+      </div>
+      <div class="facility-card facility-card-featured">
+        <div class="facility-icon"><i class='bx bx-badge-check'></i></div>
+        <h3>Kualitas Terbaik</h3>
+        <p>Bahan segar pilihan dan chef profesional. Kami jamin setiap suapan berkualitas.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-icon"><i class='bx bxs-truck'></i></div>
+        <h3>Pengiriman Cepat</h3>
+        <p>Gratis ongkir untuk pemesanan dalam area layanan kami.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEW SECTION -->
+  <section class="review-section" id="Review">
+    <div class="section-header">
+      <span class="section-label">Testimoni</span>
+      <h2 class="heading">Kata <span>Mereka</span></h2>
+      <p class="section-desc">Kepuasan pelanggan adalah prioritas utama kami</p>
+    </div>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="review-quote">"Layanan sangat cepat dan makanan enak. Sangat direkomendasikan untuk siapapun!"</p>
+            <div class="review-author">
+              <img src="review2.jpg" alt="Azamat Z." />
+              <div>
+                <strong>Azamat Z.</strong>
+                <span>Business Man</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="review-quote">"Rasa makanannya luar biasa! Tampilannya sangat menarik dan bikin nafsu makan."</p>
+            <div class="review-author">
+              <img src="review3.jpg" alt="Louis T." />
+              <div>
+                <strong>Louis T.</strong>
+                <span>Beauty Fashion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+            </div>
+            <p class="review-quote">"Sangat Lezat dan Nikmat. Kalau bisa kasih bintang 10, sudah saya kasih!"</p>
+            <div class="review-author">
+              <img src="review1.jpg" alt="Winston W." />
+              <div>
+                <strong>Winston W.</strong>
+                <span>Lawyer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#Home" class="logo-footer">Parsha<span>Food</span></a>
+        <p>Menyajikan cita rasa terbaik dengan bahan-bahan segar pilihan, demi kepuasan setiap pelanggan.</p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@parrrshaaa_" target="_blank" aria-label="TikTok"><i class='bx bxl-tiktok'></i></a>
+          <a href="https://www.instagram.com/parrrshaaa/" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+          <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+          <a href="https://github.com/ParsaaOnlyy" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <a href="#Home">Home</a>
+        <a href="#Dishes">Makanan</a>
+        <a href="#About">Koki</a>
+        <a href="#Review">Review</a>
+      </div>
+      <div class="footer-links">
+        <h4>Kontak</h4>
+        <a href="https://api.whatsapp.com/send/?phone=6285179581050" target="_blank"><i class='bx bxl-whatsapp'></i> WhatsApp</a>
+        <a href="https://www.instagram.com/parrrshaaa/" target="_blank"><i class='bx bxl-instagram'></i> Instagram</a>
+        <a href="https://www.tiktok.com/@parrrshaaa_" target="_blank"><i class='bx bxl-tiktok'></i> TikTok</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 onlyparsaa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
