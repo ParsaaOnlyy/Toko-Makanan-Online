@@ -19,7 +19,6 @@ var swiper = new Swiper(".mySwiper", {
   });
 
 
-
   let section=document.querySelectorAll('section');
   let navbar=document.querySelectorAll('.navbar a');
   window.onscroll=()=>{
